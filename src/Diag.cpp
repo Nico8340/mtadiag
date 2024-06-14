@@ -312,13 +312,13 @@ void Diag::Begin ( void )
 			std::cout << PasteBinResult << std::endl;
 		}
 	}
-	else // upload failure, open the log in WordPad so the user can copy & paste it themselves
+	else // upload failure, open the log in Notepad so the user can copy & paste it themselves
 	{
 		std::cout << std::endl << std::endl << "Failed to upload log file to MTA Pastebin." << std::endl;
 		std::cout << "Error code: \"" << PasteBinResult << "\"" << std::endl;
-		std::cout << "Please paste the contents of the opened Wordpad window at https://pastebin.mtasa.com" << std::endl;
+		std::cout << "Please paste the contents of the opened Notepad window at https://pastebin.mtasa.com" << std::endl;
 		std::cout << "Include the MTA Pastebin link in your forum post." << std::endl << std::endl;	
-		ShellExecuteA ( NULL, "open", "wordpad.exe", QuoteFilename( files[FILE_LOG] ).c_str(), NULL, SW_SHOW );
+		ShellExecuteA ( NULL, "open", "notepad.exe", QuoteFilename( files[FILE_LOG] ).c_str(), NULL, SW_SHOW );
 	}
 }
 
